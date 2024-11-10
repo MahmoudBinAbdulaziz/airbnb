@@ -5,12 +5,12 @@ import img from "@/public/Airbnb_Logo_Bélo.svg.png";
 import "@/app/globals.css";
 import SearchBar from "./SearchBar";
 import Navbar from "./Navbar";
-function Header() {
+function Header({ placeholder }: { placeholder?: string }) {
   return (
     <header className="z-50 sticky top-0 py-5 bg-white shadow-md">
       <div className="container  grid grid-cols-3">
         <Logo />
-        <SearchBar />
+        <SearchBar placeholder={placeholder} />
         <Navbar />
       </div>
     </header>
