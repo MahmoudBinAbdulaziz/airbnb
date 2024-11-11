@@ -1,6 +1,5 @@
 import Banner from "./componentes/Banner";
 import Explore from "./componentes/Explore";
-import Footer from "./componentes/Footer";
 import GreatestOutdoors from "./componentes/GreatestOutdoors";
 import Header from "./componentes/header/Header";
 import Live from "./componentes/Live";

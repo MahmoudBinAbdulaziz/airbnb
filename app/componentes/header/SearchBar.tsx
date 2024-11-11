@@ -8,9 +8,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 function SearchBar({ placeholder }: { placeholder?: string }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const searchHandler = (e: any) => {
-    setSearchTerm(e.target.value);
-  };
+
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numOfGuests, setNumOfGuests] = useState(1);
@@ -27,7 +25,9 @@ function SearchBar({ placeholder }: { placeholder?: string }) {
     <>
       <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
         <input
-          onChange={searchHandler}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
           type="text"
           placeholder={placeholder || "Start your search"}
           className="text-sm text-gray-600 placeholder-gray-400 flex-grow pl-5 bg-transparent outline-none "

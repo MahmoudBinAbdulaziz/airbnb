@@ -53,7 +53,7 @@ const SearchResult = async ({
                   ))}
                 </div>
                 <div>
-                  {searchResultData.map((listing: any) => (
+                  {searchResultData.map((listing) => (
                     <ListingCard
                       key={listing.title}
                       img={listing.img}
