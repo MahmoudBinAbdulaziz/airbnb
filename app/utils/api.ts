@@ -1,6 +1,5 @@
 const baseUrl =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.jsonkeeper.com";
-const res = await fetch(`${baseUrl}/b/4G1G`);
 
 export const getExplore = async () => {
   try {
