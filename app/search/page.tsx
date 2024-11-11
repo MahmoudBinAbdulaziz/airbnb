@@ -9,11 +9,13 @@ type SearchParams = {
   endDate: string;
   numOfGuests: string;
 };
+
 const SearchResult = async ({
-  searchParams: { location, startDate, endDate, numOfGuests },
+  searchParams,
 }: {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 }) => {
+  const { location, startDate, endDate, numOfGuests } = await searchParams;
   let formatedStartDate;
   let formatedEndDate;
   if (startDate && endDate) {
