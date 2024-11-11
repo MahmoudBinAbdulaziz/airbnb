@@ -3,6 +3,7 @@ import Header from "../componentes/header/Header";
 import { format } from "date-fns";
 import ListingCard from "../componentes/ListingCard";
 import { getSearchResult } from "../utils/api";
+import { ListingCardItem } from "../types/app";
 type SearchParams = {
   location: string;
   startDate: string;
@@ -55,7 +56,7 @@ const SearchResult = async ({
                   ))}
                 </div>
                 <div>
-                  {searchResultData.map((listing) => (
+                  {searchResultData.map((listing: ListingCardItem) => (
                     <ListingCard
                       key={listing.title}
                       img={listing.img}
